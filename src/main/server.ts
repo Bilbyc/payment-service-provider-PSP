@@ -1,6 +1,5 @@
 import express, { Router, Request, Response } from 'express'
-
-const app = express()
+import app from './config/app'
 
 const route = Router()
 
