@@ -1,14 +1,6 @@
-import express, { Router, Request, Response } from 'express'
 import app from './config/app'
+import { routes } from './routes'
 
-const route = Router()
-
-app.use(express.json())
-
-route.get('/', (req: Request, res: Response) => {
-  res.json({ message: 'PSP project' })
-})
-
-app.use(route)
+app.use(routes)
 
 app.listen(3333, () => { console.log('server running on port 3333') })
