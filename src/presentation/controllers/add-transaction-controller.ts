@@ -5,7 +5,7 @@ export class AddTransactionController implements Controller {
   async handle (httpRequest: HttpRequest): Promise<HttpResponse> {
     return {
       statusCode: 400,
-      body: { }
+      body: { message: 'working' }
     }
   }
 }

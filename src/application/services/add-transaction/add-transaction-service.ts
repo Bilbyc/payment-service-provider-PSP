@@ -1,7 +1,8 @@
-import { AddTransaction } from '../../../domain/useCases/addTransaction'
+import { TransactionModel } from '../../../domain/models/transaction'
+import { AddTransaction, AddTransactionModel } from '../../../domain/useCases/addTransaction'
 
-export class AddAccountService implements AddTransaction {
-  async add (): Promise<any> {
+export class AddTransactionService implements AddTransaction {
+  async add (transaction: AddTransactionModel): Promise<TransactionModel> {
     return {
       transaction_value: 1,
       description: 'string',
